@@ -1,6 +1,6 @@
-Read me file uses markdown syntex to edit any text, formulas or codes. 
+# Welcome to my WoTech repository 
 
-# Welcome to my repository 🛴
+In this repository you will find the exercises I have done while learning Java.
 
 ## My skills
 - Java
