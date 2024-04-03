@@ -11,7 +11,7 @@ In this repository you will find the exercises I have done while learning Java.
 2. Python web scraper
 3. Python AI tool
 
-## My favourite part of the **else if** function
+## My favourite part of the *else if* function
 
 ``` java
 double temp = 34.0;
