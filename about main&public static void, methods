@@ -1,5 +1,7 @@
-
 public class Main {
+  //requires STATIC type of varaibles - its declared at class level
+  static int sharedValue = 200;
+  
   public static void main(String[] args) { //this is called a Method. the main method is unique and must be provided. Entry (only one possible)
     //public - publically available
     //static - you can run this method without declaring an instance of this class
@@ -23,11 +25,15 @@ public static void firstMethod() { //Method. must have brackets
   int firstValue = 50;
   System.out.println(firstValue);
   //secondMethod(); - it could also be called here
+
+  //if i would put here system.out.println(mainValue); - i would get an ERROR because its not defined in this method.
 }
 
 public static void secondMethod() { //Method
   int secondValue = 120;
   System.out.println(secondValue);
+
+  System.out.println(sharedValue);
 }
   
 }
