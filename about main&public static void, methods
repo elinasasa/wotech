@@ -1,0 +1,33 @@
+
+public class Main {
+  public static void main(String[] args) { //this is called a Method. the main method is unique and must be provided. Entry (only one possible)
+    //public - publically available
+    //static - you can run this method without declaring an instance of this class
+    //void - does its job and doesnt return value. 
+   int mainValue = 14;
+    System.out.println(mainValue);
+    firstMethod(); //this is how you call the Method. if you dont call it, you dont get the firstMethod value printed
+    secondMethod(); // the second method can be called here or also in the first method.
+
+    // EXAMPLE from practice
+    //autentificateUser();
+    //verifyUser();
+    //prepareMessage();
+    //sendEmailToUser();
+    //registerInDatabase();
+
+    //every method should do only one thing and very good. usually each team member programmes different methods.
+  }
+
+public static void firstMethod() { //Method. must have brackets  
+  int firstValue = 50;
+  System.out.println(firstValue);
+  //secondMethod(); - it could also be called here
+}
+
+public static void secondMethod() { //Method
+  int secondValue = 120;
+  System.out.println(secondValue);
+}
+  
+}
