@@ -1,3 +1,7 @@
+
+
+``` Java
+
 /*
 what kinf od a place in a race you have?
 [50, 47, 44]
@@ -19,7 +23,6 @@ what kinf od a place in a race you have?
     6. Return total count + 1
 */
 
-``` Java
 public class Main {
     public static void main(String[] args) {
         int[] arr = {8, 7, 5, 3, 2, 1}; // current race results
