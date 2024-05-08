@@ -62,6 +62,46 @@ public class Main {
     }
 }
 ```
+EXAMPLE on determining prime numbers
+
+```Java
+/*
+Detect prime numbers? (number that exactly divides only by itself and 1)
+
+7 - only divides by 7 and only divides by 1
+6
+6/1 = 6
+6/2 = 3
+
+5
+5/2 = 2.5
+
+Algorythm:
+1. Go through the numbers from 2 to (number -1)
+2. check wether or not it is dividable (number % i == 0)
+3. If the 2nd point is false then its a prime number
+4. If the 2nd point is true then its not a prime number
+*/
+
+public class Main {
+    public static void main(String[] args) {
+
+      for(int i = 0; i < 100; i++){
+        boolean isAPrimeNumber = isPrime(i);
+        System.out.println(i + " is a prime number - " + isAPrimeNumber);
+      }
+    }
+
+    public static boolean isPrime(int number){
+        for(int i = 2; i < number; i++){
+          if(number % i == 0){
+            return false;
+          }
+        }
+        return true; // comes here if the number is not dividable by anything
+    }
+}
+```
 
 
 
