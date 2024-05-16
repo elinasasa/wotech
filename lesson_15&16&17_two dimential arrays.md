@@ -156,6 +156,57 @@ public class Main {
 array is a reference type, whatever changes you do are globally. its not the same for numbers.
 
 
+## tic tac toe
 
+```Java
+import java.util.Scanner;
 
+public class SimpleGame {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int rows = 5; // You can change the size of the array as needed
+        int cols = 5;
+        int[][] grid = new int[rows][cols];
 
+        while (true) {
+            // Print the current state of the grid
+            for (int i = 0; i < rows; i++) {
+                for (int j = 0; j < cols; j++) {
+                    System.out.print(grid[i][j] + " ");
+                }
+                System.out.println();
+            }
+
+            // Ask user for row and column
+            System.out.println("Enter row (0 to " + (rows - 1) + "): ");
+            int row = scanner.nextInt();
+            System.out.println("Enter column (0 to " + (cols - 1) + "): ");
+            int col = scanner.nextInt();
+
+            // Check if the input is within bounds
+            if (row >= 0 && row < rows && col >= 0 && col < cols) {
+                grid[row][col] = 1;
+
+                // Check if the specified row contains all 1s
+                boolean won = true;
+                for (int j = 0; j < cols; j++) {
+                    if (grid[row][j] != 1) {
+                        won = false;
+                        break;
+                    }
+                }
+
+                if (won) {
+                    System.out.println("Congratulations! You've won!");
+                    break;
+                }
+            } else {
+                System.out.println("Invalid input. Please try again.");
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+```
