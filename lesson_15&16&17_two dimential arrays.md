@@ -77,11 +77,12 @@ public class Main {
   public static void main(String[] args) {
 
     int[][] array = new int[5][5];
-    int count = 1;
+    //int count = 1;
 
     for (int i = 0; i < array.length; i++) {
       for (int j = 0; j < array[i].length; j++) {
-        array[i][j] = i*array.length+j+1;
+        array[i][j] = i*array.length+j+1; // or simply  array[i][j] = count++; // = count = count +1;
+// this this more complicated one we are making too many actions
         System.out.print(array[i][j] + " ");
       }
       System.out.println();
@@ -89,22 +90,29 @@ public class Main {
   }
 
 }
-``` 
+```
+
+Dont ever use i++ or j++ outside the for loop. 
 
 # LESSON 16
 
 Reference type vs value type.
+???
+
+one is written: array = changeArray(array)
+other one : changeArray(array)
+
 
 ```Java
 public class Main {
     public static void main(String[] args) {
         int number = 20;
         number = changeNumber(number);
-        System.out.println(number);
+        System.out.println(number); // the result here is 55
         
         int numberVoid = 20;
         changeNumberVoid(numberVoid);
-        System.out.println(numberVoid);
+        System.out.println(numberVoid); // result = 20
     }
 
     public static int changeNumber(int number){
@@ -113,22 +121,26 @@ public class Main {
     }
 
     public static void changeNumberVoid(int number){
-        number = 55; //THIS NUMBER WILL NOT CHANGE THE numberVoid value
+        number = 55; //THIS NUMBER WILL NOT CHANGE THE numberVoid value, because we dont have "return"
     }
 }
 ```
 
 
 ```Java
+// this is a reference type
+
     public class Main {
     public static void main(String[] args) { // Main method
         int[] array = { 1, 2, 3, 4, 5 }; // 1. declare an array
-        array = changeArray(array); // 2. change the content of the array
+        array = changeArray(array); // 2. change the content of the array. we reasign the value of array
         printOutArray(array); // 3. print out the values of the array
 
         int[] arrayVoid = { 1, 2, 3, 4, 5 }; // 4
-        changeArrayVoid(arrayVoid); // 5
+        changeArrayVoid(arrayVoid); // 5 // it still changes due to this how its written here
         printOutArray(arrayVoid); //6
+// here we are not tehcnically changing the array bcs we dont have return in the functions. but it does change. It is possible to change the array without returning it in the function.
+
     }
 
     public static int[] changeArray(int[] array) { // 2
@@ -151,9 +163,14 @@ public class Main {
     }
 }
 // 2.1. ... steps how the code works
+
+// this is a reference type
 ```
 
-array is a reference type, whatever changes you do are globally. its not the same for numbers.
+Array is a reference type, whatever changes you do are globally, until its in the scope of the array. its not the same for changing numbers.
+For integer, boolean, float, its mandatory to return to reasign value. but if we change the array, then we dont need to return the value, bcs when we are using the array, we are actually using a reference to the memory, to the array in the memory. so our varaible doest contain the array, it just contains the reference of it. 
+
+Example 2
 
 
 ## tic tac toe
