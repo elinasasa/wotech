@@ -248,6 +248,55 @@ all primitives + string are value types.
 
 ![Screenshot 2024-06-08 at 18 37 00](https://github.com/elinasasa/wotech/assets/165931766/480801cc-25f2-48e5-a16b-7fbc92665f4f)
 
+string is also sort of primitive.
+
+#Teawork:
+
+```Java
+public class Main {
+    public static void main(String[] args) { //Main method
+
+        boolean isHuman = false;
+        boolean isHuman2 = isHuman;
+        isHuman = true;
+
+        System.out.println(isHuman == isHuman2);
+    }
+}
+// result is false
+```
+
+```Java
+public class Main {
+    public static void main(String[] args) { //Main method
+
+        String name = "James";
+        String surname = name;
+        name = "Jimmy";
+
+        System.out.println(name == surname);
+    }
+}
+// result is false
+```
+
+WHY IS THE RESULT FALSE?
+
+In Java, the == operator is used to compare references (memory addresses) when dealing with objects, rather than comparing the actual content of the objects. In Java, when you assign one variable to another, you are copying the reference, not the actual object. 
+
+1. The variable name holds a reference to this "James" object.
+2. String surname = name;
+
+The variable surname is assigned the same reference that name holds.
+Both name and surname now refer to the same "James" object in memory.
+name = "Jimmy";
+
+3. A new String object with the content "Jimmy" is created.
+The variable name is now updated to hold a reference to this new "Jimmy" object.
+**The variable surname still holds a reference to the original "James" object.**
+
+In summary, after name is reassigned to "Jimmy", name and surname refer to different objects. The == operator checks if they refer to the same object (i.e., the same memory address), which they do not in this case, resulting in false.
+
 
 ## tic tac toe
 
