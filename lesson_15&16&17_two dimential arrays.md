@@ -297,6 +297,18 @@ The variable name is now updated to hold a reference to this new "Jimmy" object.
 
 In summary, after name is reassigned to "Jimmy", name and surname refer to different objects. The == operator checks if they refer to the same object (i.e., the same memory address), which they do not in this case, resulting in false.
 
+------
+
+It doesn't work the same for all data types in Java.
+**Primitive Types**
+Primitive types include int, char, boolean, float, double, byte, short, and long. These types hold their values directly in memory. When you assign a primitive type variable to another, you copy the value itself.
+
+**Reference Types**
+Reference types include objects, arrays, and instances of classes. For reference types, variables store references (memory addresses) to the actual data. When you assign a reference type variable to another, you copy the reference, not the object itself.
+
+**Primitive types:** Assigning one variable to another copies the value itself. Changes to one variable do not affect the other.
+**Reference types:** Assigning one variable to another copies the reference. Both variables point to the same object, and changes to the object through one variable are visible through the other variable. However, reassigning one variable to a new object does not affect the other variable.
+
 
 ## tic tac toe
 
