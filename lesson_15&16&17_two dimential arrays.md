@@ -96,8 +96,7 @@ Dont ever use i++ or j++ outside the for loop.
 
 # LESSON 16
 
-Reference type vs value type.
-???
+Reference type vs value type
 
 one is written: array = changeArray(array)
 other one : changeArray(array)
@@ -124,6 +123,8 @@ public class Main {
         number = 55; //THIS NUMBER WILL NOT CHANGE THE numberVoid value, because we dont have "return"
     }
 }
+
+// this is Value type!
 ```
 
 
@@ -171,6 +172,81 @@ Array is a reference type, whatever changes you do are globally, until its in th
 For integer, boolean, float, its mandatory to return to reasign value. but if we change the array, then we dont need to return the value, bcs when we are using the array, we are actually using a reference to the memory, to the array in the memory. so our varaible doest contain the array, it just contains the reference of it. 
 
 Example 2
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+
+        int[]arrayVoid = {1, 2, 3, 4, 5};
+
+        int[] array = arrayVoid;
+        array[0] = 100;
+        printOutArray(arrayVoid);
+      
+    }
+
+  
+    public static void printOutArray(int[] array){ 
+        for(int i = 0; i < array.length; i++){ 
+            System.out.println(array[i]);
+        }
+    }
+}
+// Reference type
+``` 
+
+```Java
+public class Main {
+    public static void main(String[] args) { //Main method
+
+        int[]arrayVoid = {1, 2, 3, 4, 5};
+        int[] array2 = new int[5];
+        array2[0] = 1;
+        array2[1] = 2;
+        array2[2] = 3;
+        array2[3] = 4;
+        array2[4] = 5;
+
+        System.out.print(arrayVoid == array2);
+    }
+
+}
+// Reference type
+
+// result is false. bcs its not comparing the values of the array but the reference.
+```
+
+```Java
+public class Main {
+    public static void main(String[] args) { //Main method
+
+        int[]arrayVoid = {1, 2, 3, 4, 5};
+        int[]array2 = arrayVoid;
+        array2[0] = 123; // its going to change the value for both of them
+    
+        System.out.println(arrayVoid == array2);
+        System.out.println(arrayVoid[0]);
+        System.out.println(array2[0]);
+    }
+
+}
+// Reference type
+
+// result is true now
+
+```
+
+Its like two people with the same name are not the same. the object is different but the values are the same. 
+In reference tupe everywhere where you use the array it will be the same value. It is not the case in the value type.
+
+
+```Java
+
+```
+
+all primitives + string are value types. 
+
+![Screenshot 2024-06-08 at 18 37 00](https://github.com/elinasasa/wotech/assets/165931766/480801cc-25f2-48e5-a16b-7fbc92665f4f)
 
 
 ## tic tac toe
