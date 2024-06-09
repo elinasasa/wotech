@@ -151,3 +151,183 @@ public class SimpleGame {
 }
 
 ```
+
+
+
+
+
+#LESSON 17 
+
+![Screenshot 2024-06-09 at 17 05 44 2](https://github.com/elinasasa/wotech/assets/165931766/65892170-14bd-431f-83b4-6f137e6d4daa)
+
+Examples we can do with this language: mine sweeper, batleship game, labirinth, bingo
+When we are developing such a grib, we dont use hard numbers, its always i and j. 
+
+"Index out of bounds exception" - you are tying to add value to smth that doesnt exist. Error. 
+
+Minesweeper game:
+
+```Java
+public class Main {
+    public static void main(String[] args) { //Main method
+        int size = 10;
+        int [][] grid = new int [size][size];
+        int bombColumn = 1;
+        int bombRow = 1;
+
+
+        grid[bombRow][bombColumn] = 5; //center
+        grid[bombRow -1][bombColumn] = 1; // top middle
+        grid[bombRow -1][bombColumn -1] = 1; // top left
+        grid[bombRow -1][bombColumn +1] = 1; // top right
+
+        grid[bombRow +1][bombColumn] = 1; // bottom middle
+        grid[bombRow +1][bombColumn -1] = 1; // bottom left
+        grid[bombRow +1][bombColumn +1] = 1; // bottom right
+
+        grid[bombRow][bombColumn -1] = 1; // middle left
+        grid[bombRow][bombColumn +1] = 1; // middle right
+        
+        
+        printArray(grid,size);
+        
+    }
+
+        // 1  1  1  0  0  0  0  
+        // 1 -1  1  0  0  0  0  
+        // 1  1  1  0  0  0  0  
+        // 0  0  0  0  0  0  0  
+        // 0  0  0  0  0  0  0 
+        // ... times 10
+
+    public static void printArray(int[][] array, int size){
+        for(int i=0; i<size; i++){ // this is where we declare i
+            for(int j=0; j<size; j++){ // declare j
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+        
+    
+}
+```
+integer default value is 0.
+
+
+
+to access the 0 row, we need to use an If conditions ->
+if we dont, then to access row 0 there would be bombRow - 1 = -1, which doesnt exist
+
+
+```Java
+public class Main {
+    public static void main(String[] args) { //Main method
+        int size = 10;
+        int [][] grid = new int [size][size];
+        int bombColumn = 1;
+        int bombRow = 9;
+
+
+        grid[bombRow][bombColumn] = 5; //center
+        if(bombRow != 0){
+            grid[bombRow -1][bombColumn] = 1; // top middle
+            grid[bombRow -1][bombColumn -1] = 1; // top left
+            grid[bombRow -1][bombColumn +1] = 1; // top right
+        }
+        if(bombRow != size -1){ // because array row start with 0
+            grid[bombRow +1][bombColumn] = 1; // bottom middle
+            grid[bombRow +1][bombColumn -1] = 1; // bottom left
+            grid[bombRow +1][bombColumn +1] = 1; // bottom right
+        } 
+            
+        grid[bombRow][bombColumn -1] = 1; // middle left
+        grid[bombRow][bombColumn +1] = 1; // middle right
+        
+        
+        printArray(grid,size);
+        
+    }
+
+        // 1  1  1  0  0  0  0  
+        // 1 -1  1  0  0  0  0  
+        // 1  1  1  0  0  0  0  
+        // 0  0  0  0  0  0  0  
+        // 0  0  0  0  0  0  0 
+        // ... times 10
+
+    public static void printArray(int[][] array, int size){
+        for(int i=0; i<size; i++){ // this is where we declare i
+            for(int j=0; j<size; j++){ // declare j
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+        
+    
+}
+```
+
+
+FINAL CODE
+
+```Java
+public class Main {
+    public static void main(String[] args) { //Main method
+        int size = 10;
+        int [][] grid = new int [size][size];
+        int bombColumn = 9;
+        int bombRow = 1;
+
+
+        grid[bombRow][bombColumn] = 5; //center
+        if(bombRow != 0){
+            grid[bombRow -1][bombColumn] = 1; // top middle
+            if(bombColumn != 0){
+                grid[bombRow -1][bombColumn -1] = 1; // top left
+            }
+            if(bombColumn != size -1){
+                grid[bombRow -1][bombColumn +1] = 1; // top right
+            }
+        }
+        if(bombRow != size -1){ // because array row start with 0
+            grid[bombRow +1][bombColumn] = 1; // bottom middle
+            if(bombColumn != 0){
+                grid[bombRow +1][bombColumn -1] = 1; // bottom left
+            }
+            if(bombColumn != size -1){
+                grid[bombRow +1][bombColumn +1] = 1; // bottom right
+            }
+        } 
+        if(bombColumn != 0){
+            grid[bombRow][bombColumn -1] = 1; // middle left
+        }
+        if(bombColumn != size - 1){
+            grid[bombRow][bombColumn +1] = 1; // middle right
+        }
+        
+        printArray(grid,size);
+        
+    }
+
+        // 1  1  1  0  0  0  0  
+        // 1 -1  1  0  0  0  0  
+        // 1  1  1  0  0  0  0  
+        // 0  0  0  0  0  0  0  
+        // 0  0  0  0  0  0  0 
+        // ... times 10
+
+    public static void printArray(int[][] array, int size){
+        for(int i=0; i<size; i++){ // this is where we declare i
+            for(int j=0; j<size; j++){ // declare j
+                System.out.print(array[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+        
+    
+}
+```
+
