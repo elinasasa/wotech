@@ -156,7 +156,7 @@ public class SimpleGame {
 
 
 
-#LESSON 17 
+# LESSON 17 
 
 ![Screenshot 2024-06-09 at 17 05 44 2](https://github.com/elinasasa/wotech/assets/165931766/65892170-14bd-431f-83b4-6f137e6d4daa)
 
