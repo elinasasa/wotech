@@ -297,5 +297,63 @@ Filter the arrayList and print out only numbers that divide by 2
 var numbers = new ArrayList<Integer>();
 ```
 
+# Individual task
 
+```Java
+//Develop a simple book management application with ArrayList.
+//User should be able to add a book to ArrayList.
+//User should be able to remove a book from ArrayList.
+
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        var bookApp = new ArrayList<String>();
+        var scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Enter the name of a book to add to the list or type 'exit' to quit:");
+            var item = scanner.nextLine();
+            if (item.equals("exit")) {
+                break;
+            }
+            addBook(bookApp, item);
+        }
+
+        inventory(bookApp);
+
+        while (true) {
+            System.out.println("Enter the book that you want to remove or type 'exit' to quit:");
+            var bookToRemove = scanner.nextLine();
+            if (bookToRemove.equals("exit")) {
+                break;
+            }
+            removeBook(bookApp, bookToRemove);
+        }
+      inventory(bookApp);
+        scanner.close();
+    }
+
+    public static void inventory(ArrayList<String> items) {
+        System.out.println("System has these items:");
+        for (String item : items) {
+            System.out.println(item);
+        }
+    }
+
+    public static void addBook(ArrayList<String> items, String item) {
+        items.add(item);
+        System.out.println(item + " has been added to the system");
+    }
+
+    public static void removeBook(ArrayList<String> items, String bookToRemove) {
+        items.removeIf(item -> item.equals(bookToRemove));
+        System.out.println(bookToRemove + " has been removed from the system");
+    }
+}
+
+```
 
