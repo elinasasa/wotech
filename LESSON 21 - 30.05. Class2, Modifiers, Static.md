@@ -192,5 +192,11 @@ public class Fork{
 // Sharpness is gonna decrease by 1
 ```
 
+TEAMWORK: 
+Glass, water amount, take a sip, how much water is left.
+or any other example. think of an object and then think what actions it can do.
+
+![Screenshot 2024-06-25 at 21 49 54](https://github.com/elinasasa/wotech/assets/165931766/e24e8591-e8e3-470c-84bf-7b0f23541bd2)
+
 
 
