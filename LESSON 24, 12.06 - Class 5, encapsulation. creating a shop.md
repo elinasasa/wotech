@@ -43,6 +43,7 @@ Return for void is like a break for a loop.
 
 ## Example on a shop
 
+![Screenshot 2024-06-28 at 21 09 05](https://github.com/elinasasa/wotech/assets/165931766/80fb6bcd-ee20-4651-b05e-4737af43ab8c)
 
 
 ```Java
