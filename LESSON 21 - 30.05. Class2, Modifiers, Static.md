@@ -199,4 +199,10 @@ or any other example. think of an object and then think what actions it can do.
 ![Screenshot 2024-06-25 at 21 49 54](https://github.com/elinasasa/wotech/assets/165931766/e24e8591-e8e3-470c-84bf-7b0f23541bd2)
 
 
+TEST:
 
+Keyword "new" creates an object instance made from a class. - TRUE
+Constructor is a method that get's called whenever an object is created. - TRUE
+Private access modifier is allowing other objects to access data, but hides the data from other programs. - FALSE
+Static variables and static methods are only accessible after the object is initialized. - FALSE
+Getters and setters are used for the developer to maintain encapsulation. So other objects can't impact data it shouldn't impact. - TRUE
