@@ -1,5 +1,6 @@
-LESSON 26. 3.07
+# LESSON 26. 3.07
 
+## Inheritance
 SUBCLASS AND SUPERCLASS
 
 Instead of adding WineShop class to the CHeeseShop, we can just create an item and then in subclasses Wine and CHeese. where they each can have their own properties, like cheese could have origion, type etc.
@@ -135,7 +136,170 @@ public class Item{
 }
 ```
 
+We can have inheritacne of inheritance of inheritance. like animal -> pet -> dog.
 
+## Payment system example
 
+```Java
+import java.util.arrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    var list = new ArrayList<PaymentService>();
+    
+    
+    // PaymentService
+    // SebPaymentService
+    // SwedPaymentService
+  }
+
+}
+```
+
+```Java
+public class PaymentService{
+  public String clientAddress; // IBAN
+  public int amount;
+  public String description;
+  public String currency;
+}
+```
+
+```Java
+public class SebPaymentService extends PaymentService{
+ public void sendPaymentToSeb(){
+   System.out.println("This is a payment to SEB service");
+ } 
+}
+```
+
+```Java
+public class SwedPaymentService extends PaymentService{
+ public void sendPaymentToSwed(){
+   System.out.println("This is a payment to SWED service");
+ } 
+}
+```
+
+casting
+
+when understanding that its not just a cheese but its parmesan. 
+
+```Java
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    var list = new ArrayList<PaymentService>();
+    
+    var sebPaymentService1 = new SebPaymentService();
+    list.add(sebPaymentService1);
+    sebPaymentService1.currency = "EUR";
+    sebPaymentService1.amount = 10500;
+    sebPaymentService1.clientAddress = "LV92SEB12985865722111";
+
+    var sebPaymentService2 = new SebPaymentService();
+    list.add(sebPaymentService2);
+    sebPaymentService2.currency = "USD";
+
+    var swedPaymentService1 = new SwedPaymentService();
+    list.add(swedPaymentService1);
+    swedPaymentService1.currency = "EUR";
+
+    var swedPaymentService2 = new SwedPaymentService();
+    list.add(swedPaymentService2);
+    swedPaymentService2.currency = "USD";
+
+    for(var paymentService : list){
+      System.out.println(paymentService.currency);
+      if(paymentService instanceof SebPaymentService){
+        var sebService = (SebPaymentService) paymentService; // or SebPaymentService ...instead of var...sebService = (SebPaymentService) paymentService;
+        sebService.sendPaymentToSeb();
+      
+      }else if (paymentService instanceof SwedPaymentService){
+        var swedService = (SwedPaymentService) paymentService;
+        swedService.sendPaymentToSwed();
+      }
+    }
+  }
+
+}
+
+```
+
+This works only with methods
+
+cleaninh up the code with @Override
+
+```Java
+
+import java.util.ArrayList;
+
+public class Main {
+  public static void main(String[] args) {
+    var list = new ArrayList<PaymentService>();
+    
+    var sebPaymentService1 = new SebPaymentService();
+    list.add(sebPaymentService1);
+    sebPaymentService1.currency = "EUR";
+    sebPaymentService1.amount = 10500;
+    sebPaymentService1.clientAddress = "LV92SEB12985865722111";
+
+    var sebPaymentService2 = new SebPaymentService();
+    list.add(sebPaymentService2);
+    sebPaymentService2.currency = "USD";
+
+    var swedPaymentService1 = new SwedPaymentService();
+    list.add(swedPaymentService1);
+    swedPaymentService1.currency = "EUR";
+
+    var swedPaymentService2 = new SwedPaymentService();
+    list.add(swedPaymentService2);
+    swedPaymentService2.currency = "USD";
+
+    for(var paymentService : list){
+      System.out.println(paymentService.currency);
+      paymentService.sendPayment();
+      
+    
+    }
+  }
+
+}
+```
+
+```Java
+public class PaymentService{
+  public String clientAddress; // IBAN
+  public int amount;
+  public String description;
+  public String currency;
+
+  public void sendPayment(){
+     System.out.println("This is a payment to some service");
+   } 
+}
+```
+
+```Java
+public class SebPaymentService extends PaymentService{
+
+  @Override
+ public void sendPayment(){
+   System.out.println("This is a payment to SEB service");
+ } 
+}
+```
+
+```Java
+public class SwedPaymentService extends PaymentService{
+
+   @Override
+   public void sendPayment(){
+   System.out.println("This is a payment to SWED service");
+ } 
+}
+```
 
 
