@@ -23,3 +23,6 @@ F12 button on computer on a website opens up some thingy - we are interested in 
 Oskars as a parameter in the request. both request and response contain payload/body.
 
 Opening developer tools.
+
+![image](https://github.com/elinasasa/wotech/assets/165931766/d3d896d5-2c18-4c59-acb5-f25a2e8b7ce1)
+
