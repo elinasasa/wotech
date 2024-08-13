@@ -24,7 +24,7 @@ Controller sends the data back to user, confirming it.
 
 Only thing changing is Data when we update smth - DB, business logic and controller dont chnage. With small exceptions. 
 
-can business logic speak to DB directly? Why a data repository is needed between them? - to avoid that we ask the same "question" many times. 
+can business logic speak to DB directly? Why a data repository is needed between them? - to avoid that we ask the same "question" many times. bcs there is some logic already in the repo. 
 
 ![image](https://github.com/user-attachments/assets/918a1b62-e2ea-467d-9812-dd7aeafba11b)
 
@@ -41,5 +41,5 @@ Delete
 
 = CRUD
 
-
+DTOs - contain just the data. objects without functionality
 
