@@ -10,7 +10,7 @@ FLow
 
 <img width="764" alt="Screenshot 2024-08-13 at 21 48 07" src="https://github.com/user-attachments/assets/db3e61b9-88e1-468b-98ed-5ea4b2e107f8">
 
-
+This is the **clean architecture**. 
 ![image](https://github.com/user-attachments/assets/b4daa0f1-7718-439d-b244-0cd1cb1b5b68)
 
 the Data/Repository checks eg. - do we have this client? --- the data gets it (asks) from Database. the DB is on a different server, different language. 
@@ -43,3 +43,4 @@ Delete
 
 DTOs - contain just the data. objects without functionality
 
+This is **clean architecture**. 
