@@ -122,3 +122,11 @@ public class UserService {
 <img width="1265" alt="Screenshot 2024-08-14 at 20 13 47" src="https://github.com/user-attachments/assets/650e06dc-86dc-4a21-aa8d-14e22d212b9f">
 
 
+#HOMEWORK:
+
+1. Create MessageController.java
+2. Create MessageService.java
+3. Create Message.java
+4. In message controller, create an endpoint, which uses both MessageService and Message.java
+5. HELP YOUR TEAMMATES TO GET EVERYTHING WORKING pls (including UserController/Service etc)
+
