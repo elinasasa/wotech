@@ -104,6 +104,19 @@ the left is used more often and its better if there are many things. otherwise t
 
 <img width="1390" alt="Screenshot 2024-08-14 at 20 14 14" src="https://github.com/user-attachments/assets/c0dd8de9-bd46-4162-8d4c-cbd1c456783f">
 
+UserService code:
+```java
+package com.datorium.Datorium.API.DTOs.Services;
+
+import com.datorium.Datorium.API.DTOs.User;
+
+public class UserService {
+    public int add (User user){
+        return 0;
+    }
+}
+```
+
 <img width="1265" alt="Screenshot 2024-08-14 at 20 13 47" src="https://github.com/user-attachments/assets/650e06dc-86dc-4a21-aa8d-14e22d212b9f">
 
 
