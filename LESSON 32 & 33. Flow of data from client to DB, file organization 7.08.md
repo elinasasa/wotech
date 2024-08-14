@@ -102,6 +102,8 @@ Two ways to sort the code:
 
 the left is used more often and its better if there are many things. otherwise the right gets too messy. 
 
+
+Here we are connecting the API with the service/business logic (image above)
 <img width="1390" alt="Screenshot 2024-08-14 at 20 14 14" src="https://github.com/user-attachments/assets/c0dd8de9-bd46-4162-8d4c-cbd1c456783f">
 
 UserService code:
