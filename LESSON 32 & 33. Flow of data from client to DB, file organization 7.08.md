@@ -126,7 +126,7 @@ public class UserService {
 
 1. Create MessageController.java
 2. Create MessageService.java
-3. Create Message.java
+3. Create Message.java (its a DTO)
 4. In message controller, create an endpoint, which uses both MessageService and Message.java
 5. HELP YOUR TEAMMATES TO GET EVERYTHING WORKING pls (including UserController/Service etc)
 
