@@ -36,4 +36,8 @@ TEAMWORK
 Check DTO vs Entity .
 DTO is for communication through layers. Entity is for saving info in database.
 
+To update an entity in database, we must use DTO that comes from payload - True
+DTO stands for data transfer object.
+Entity is an object, that transfers data from frontend to backend. - False
+Database server is the same as repository server. - False
 
