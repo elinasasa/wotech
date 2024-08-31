@@ -53,4 +53,48 @@ in printing CMYK is used bcs the basic (paper) is white!
 ![image](https://github.com/user-attachments/assets/25509ad5-dc8c-4a95-b7da-d6e47f9d33bf)
 
 porition of the word = positional coding. we give coordinates to every tocken - embeding layer. 
-one word has the same embeddings in each genrated. each tocken has its own vector of values. 
+one word has the same embeddings in each genrated. each tocken has its own vector of values. in 4D 
+
+WHY does mouse has those specific numbers? 
+it works somehow on associations
+all words have coordinates
+
+![Image 31-08-2024 at 10 54](https://github.com/user-attachments/assets/845572b2-1f1e-401d-a5db-53f2aef3b2d6)
+
+for example 2D - Tech and Live (human is live and computer would be tech
+
+![Image 31-08-2024 at 11 01](https://github.com/user-attachments/assets/2096f0f0-623d-45f4-a5c6-a86f7306af95)
+
+Water = [0.7, 0.1, 1.0]
+
+in real life there a thousands of dimantions.
+but the dimensions for mouse, for example, would change every time depending on the context in which the word appear? - no
+
+## Neural nets, simplified, types
+
+this ti the GPT2 model visualized.
+https://poloclub.github.io/transformer-explainer/
+
+if softmax it runs and gets probabilities. that how you get words with probabilities.
+
+#What are neural networks?
+
+imitating brain neurons and their connections.
+
+![image](https://github.com/user-attachments/assets/5a08f399-a0a9-4d6d-9335-df0538411200)
+
+some connections at thicker (in brain physically thincker as well). it carries then more info also - where its thicker. the thicknes is defined in weight.
+
+![image](https://github.com/user-attachments/assets/93405caa-f774-404c-bdb6-51c325c46872)
+
+in this example colour had "heavier" conenctions with RGB, and for exmaple shape not.
+
+https://www.youtube.com/watch?v=N9sF_D0Z5bc
+
+## Training neural network
+
+priving images and telling what it is. proviging millions of data. then you run the neural netowrk and it trains and readjusts the neural connections (the weights). 
+its done through gradients.
+
+
+
