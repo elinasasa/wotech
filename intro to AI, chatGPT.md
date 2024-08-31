@@ -34,6 +34,7 @@ the GPT isnt trained to remember where the info it takes is comming from. doesnt
 - proximity
 - ...
 
+## RGB example, creating colors
 #How does RGB colour coding works?
 Red, green, blue - RGB. the main 3 colours of monitor pixels. you mix them. every pixel has 3 bulbs - RGB
 pixel is a combo of RGB together. 
@@ -47,7 +48,7 @@ the values encode the color.
 in printing CMYK is used bcs the basic (paper) is white!
 
 
-# Tokens and embedding vectors
+## Tokens and embedding vectors
 
 ![image](https://github.com/user-attachments/assets/25509ad5-dc8c-4a95-b7da-d6e47f9d33bf)
 
