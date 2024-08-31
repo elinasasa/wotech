@@ -45,5 +45,32 @@ you can alsos elect specific columns
 
 ```SELECT Name, Surname, City FROM Owners; ```
 
+selecting all pets whoes age is 11.
+
+```SELECT * FROM Pets WHERE Age=11; ```
+
+```SELECT * FROM Pets WHERE Age>11; ```
+
+```SELECT * FROM Pets WHERE Kind='Cat'; ```
+
+```SELECT * FROM Pets WHERE Kind='Dog' AND Age<5; ``` 
+
+```SELECT PetId, Name FROM Pets WHERE Kind='Dog' AND Age<5; ```
+
+where name contains "s":
+
+```  SELECT * FROM Pets WHERE Kind = 'Dog' AND Name LIKE '%S%'; ```
+
+make it's case sensitive:
+```SELECT * FROM Pets WHERE Kind = 'Dog' AND Name GLOB '*si*';```
+
+```SELECT * FROM Pets WHERE LENGTH(Name) < 3;```
+
+
+
+
+
+
+
 
 
