@@ -15,3 +15,9 @@ main drive behind refactoring is cleaning up the code.
 
 ![Screenshot 2024-09-12 at 19 02 37](https://github.com/user-attachments/assets/341cffd0-493c-4882-b822-ed8c065d878f)
 this is for the DatoriumAPI code in IntelIJ
+
+
+You can create a html file and copy in the code there.
+
+Read about hibernate / ORM
+
