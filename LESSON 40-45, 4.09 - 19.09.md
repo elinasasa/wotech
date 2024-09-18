@@ -21,7 +21,7 @@ You can create a html file and copy in the code there.
 
 Read about hibernate / ORM
 
-# LESSON 4smth
+# LESSON 44
 
 red dot is colled a breakpoint, the programme stops exactly there. thats where the code breaks. then you use debug button.
 its useful bcs you are able to see what function receivs smth.
