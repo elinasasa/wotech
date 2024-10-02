@@ -108,3 +108,41 @@ public class City {
 
 
 ```
+
+
+### Interfaces
+
+its important that services work independantly from repository
+
+Repository needs to be standardised and repo interface needs to have necessary methods.
+this helps with - so tests wouldnt affect the actual DB.
+
+example with authentification into government pages - thoguh bank authentification.
+
+class has implementation, in interface we dont.
+
+
+Base class vs abstract class
+so, interface is abstract class with empty body..
+
+can it be that different repos have a method with the same name but the implementation is totally different? - yes
+
+
+
+from 1:07 left in previous lecture
+
+
+ORM un DevOps - still to come a video
+
+Mockito
+
+seed in random -- ?
+
+
+Mock tests - its sort of when you know the result. its always the same.
+
+
+
+
+
+
