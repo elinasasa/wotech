@@ -19,9 +19,92 @@ simplest version of the chances would be:
 
 [goog, goog, goog, wocity]
 
+0. prepare a list of cities
 1. count the total amount of citizens -> 100
 2. choose rndom number ->56
 3. loop for each city to find 0. when its 0 or below then its the city that wins. in a loop constantly take away -1. 
+4. choose the city with correct lottery ticket
+
+```java
+//CITY SERVICE.java
+
+package com.datorium.Datorium.API.CityLottery;
+
+import java.util.ArrayList;
+import java.util.Random;
+
+/**
+ * 0. prepare a list of cities
+ * 1. count the total amount of citizens -> 100
+ * 2. choose rndom number ->56
+ * 3. loop for each city to find 0. t
+ * 4. choose the city with correct lottery ticket
+ *
+ * **/
+
+public class CityService {
+    public City getRandomCity() throws Exception {
+        // 0. Prepare a list of cities
+        ArrayList<City> cities = new ArrayList<>();
+        var goog = new City("Goog", 75);
+        var wocity = new City("Wocity", 25);
+        var oskarscity = new City("Oskars city", 25);
+        cities.add(goog);
+        cities.add(wocity);
+        cities.add(oskarscity);
+        //1. Count total amount of citizens -> 100
+        var totalCitizenCount = 0;
+        for (City city: cities){
+            totalCitizenCount += city.getPopulation();
+        }
+        //2. Choose random number -> 56
+        Random random = new Random();
+        int randomValue = random.nextInt(totalCitizenCount);
+
+        //3. Loop going through all of the cities
+        //4. Choose the city with correct lottery ticket
+        //population -> 25
+        //randomValue -> 56
+        //We subtract 56 - 25 = 31
+        // BECAUSE ITS NOT BELOW OR EQUAL TO 0, GO TO NEXT
+        // 31 - 75 -> because it's below 0, we choose this city
+        for(City city: cities){
+            randomValue -= city.getPopulation();
+
+            if(randomValue <= 0){
+                return city;
+            }
+        }
+        throw new Exception("Something wrong");
+    }
+}
 
 
+```
 
+
+```java
+// CITY.java
+
+package com.datorium.Datorium.API.CityLottery;
+
+public class City {
+    private final String name;
+    private final int population;
+
+    public City(String name, int population) {
+        this.name = name;
+        this.population = population;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPopulation() {
+        return population;
+    }
+}
+
+
+```
