@@ -143,6 +143,18 @@ Mock tests - its sort of when you know the result. its always the same.
 
 
 
+## ORM = hybernate
+
+its a framework.
+its like a layer between repository and DB.
 
 
+![image](https://github.com/user-attachments/assets/92ab2811-b62d-45cd-89f4-88a9ae536d43)
+
+
+
+
+It looks similar, but:
+html is designed to display data
+xml is designed to store data
 
